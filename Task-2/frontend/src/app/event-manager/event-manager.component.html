@@ -1,0 +1,32 @@
+<div class="event-manager">
+    <h1>Event Manager</h1>
+    <form (submit)="addEvent(); $event.preventDefault()">
+        <label for="event-name">Event Name:</label>
+        <input id="event-name" [(ngModel)]="name" name="event-name" required />
+
+        <label for="start-time">Start Time (0-23):</label>
+        <input id="start-time" type="number" [(ngModel)]="start_time" name="start-time" min="0" max="23" required />
+
+        <label for="end-time">End Time (0-23):</label>
+        <input id="end-time" type="number" [(ngModel)]="end_time" name="end-time" min="0" max="23" required />
+
+        <button type="submit">Add Event</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Event Name</th>
+                <th>Start Time</th>
+                <th>End Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let event of events">
+                <td>{{ event.name }}</td>
+                <td>{{ event.start }}</td>
+                <td>{{ event.end }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
