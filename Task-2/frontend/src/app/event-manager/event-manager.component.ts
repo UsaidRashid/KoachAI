@@ -29,7 +29,7 @@ export class EventManagerComponent implements OnInit {
   async fetchEvents() {
     try {
       const response = await axios.get(
-        'https://task-2-pgzc.onrender.com//get-events'
+        'https://task-2-pgzc.onrender.com/get-events'
       );
       this.events = response.data.events;
     } catch (error) {
@@ -41,7 +41,7 @@ export class EventManagerComponent implements OnInit {
     if (this.start_time !== null && this.end_time !== null && this.name) {
       try {
         const response = await axios.post(
-          'https://task-2-pgzc.onrender.com//add-event',
+          'https://task-2-pgzc.onrender.com/add-event',
           {
             n: this.name,
             s: this.start_time,
