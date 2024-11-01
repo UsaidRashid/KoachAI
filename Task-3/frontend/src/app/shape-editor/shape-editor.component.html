@@ -1,0 +1,13 @@
+<div>
+    <select [(ngModel)]="selectedShapeType">
+        <option value="rectangle">Rectangle</option>
+        <option value="cylinder">Cylinder</option>
+        <option value="sphere">Sphere</option>
+    </select>
+    <button (click)="drawShape()" [disabled]="shapeCreated">Draw Shape</button>
+
+    <button (click)="moveShape('up')">Move Up</button>
+    <button (click)="moveShape('down')">Move Down</button>
+    <button (click)="moveShape('left')">Move Left</button>
+    <button (click)="moveShape('right')">Move Right</button>
+</div>

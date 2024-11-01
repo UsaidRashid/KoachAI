@@ -1,0 +1,13 @@
+{
+  "dependencies": {
+    "@colyseus/arena": "^0.14.25",
+    "@colyseus/monitor": "^0.15.8",
+    "@colyseus/redis-presence": "^0.15.5",
+    "@colyseus/schema": "^2.0.36",
+    "colyseus": "^0.15.17",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "mongodb": "^6.10.0",
+    "redis": "^4.7.0"
+  }
+}
