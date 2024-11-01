@@ -1,10 +1,12 @@
+require("dotenv").config();
+
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const port = 6564;
+const port = process.env.PORT || 6564;
 
 const mongoose = require("mongoose");
-const mongoUrl = "mongodb://127.0.0.1:27017/KoachAI-Task-1";
+const mongoUrl = process.env.MONGO_URL;
 
 main()
   .then(() => {
